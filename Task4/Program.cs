@@ -1,9 +1,11 @@
 ﻿// на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+string s="q";
 
 do {
-Console.WriteLine("Для выходы нажмите q");
-Console.Write("Введите число: ");
-string s = Console.ReadLine();
+Console.Clear();
+Console.WriteLine("Для выхода нажмите q");
+Console.Write("Введите число N: ");
+s = Console.ReadLine();
 if (s =="q") break; 
 int N = Convert.ToInt32(s);
 
@@ -13,8 +15,9 @@ if (N <= 1 ) {
 }
 else {
     Console.Write("Четные числа от 1 до "+N+": ");
-    for (int i = 2; i <= N; i++)
-         if ( (i%2) != 0 ) 
-             Console.Write(N+", ");
+    for (int i = 2; i <= N; i+=2)
+        // if ( (i%2) == 0 ) 
+             Console.Write(i+", ");
 }
+s = Console.ReadLine();
 } while ( s !="q" );
